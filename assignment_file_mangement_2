@@ -1,20 +1,17 @@
-def check_space(string):
-     
-    # counter
-    count = 0
-     
-    # loop for search each index
-    for i in string:
-         
-        # Check each char
-        # is blank or not
-        if i == " ":
-            count += 1
-         
-    return count
- 
+myfile = open("poem.txt", 'r')
+lines = 0
+words = 0
+characters = 0
+for line in myfile:
+    wordslist = line.split()
+    lines = lines + 1
+    words = words + len(wordslist)
+    characters = characters + len(line)
+print("\nHas ",lines," lines")
+print("\nHas ",words," words")
+print("\nHas ",characters," characters")
 
- 
-# call the function and display
-print("number of spaces ",check_space(string))
-    
+myfile = open("poem.txt","r")
+for line in myfile:
+  print(line)
+myfile.close
